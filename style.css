@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* width: 1366px; */
+    margin: 0 auto;
+    font-size: 10px;
+    background: radial-gradient(circle at center, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    color: #ffffff;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.modal-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000a3;
+    z-index: 1;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 4em;
+    border-radius: 10px;
+    color: #3B4262;
+}
+
+.hide-item {
+    left: -9999px;
+}
+
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+
+.show {
+    position: static;
+}
+
+.model__header {
+    margin-bottom: 3em;
+}
+
+.modal__heading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.jc-sp-btw {
+    justify-content: space-between;
+}
+
+.jc-cntr {
+    justify-content: center;
+}
+
+.alg-itms-cntr {
+    align-items: center;
+}
+
+.cur-point {
+    cursor: pointer;
+
+}
+
+.radical-bg {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    z-index: -1;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle,  hsl(237, 49%, 15%, 0%) , hsl(225deg 25% 32% / 41%) 18%);
+}
+
+.btn {
+    font-size: 16px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+} 
+
+.btn-outer {
+    border: 2px solid hsl(217, 16%, 45%);
+    position: absolute;
+    z-index: 1;
+}
+
+.rules-btn-position {
+    bottom: 5em;
+    right: 5em;
+}
+
+.score-reset-btn-position {
+    bottom: 10em;
+    right: 5em;
+} 
+
+/* score */
+.score-container{
+    width: 650px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 20px;
+    padding: 2em;
+    margin-bottom: 8em;
+}
+
+.score__card{
+    width: 150px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.score__heading{
+    color: hsl(229, 64%, 46%);
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score__number{
+    color: hsl(229, 25%, 31%);
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 8em;
+}
+
+.main-container{
+    transform: translateY(-5%);
+    height: 100vh;
+    flex-direction: column;
+}
+
+.icon-container {
+    position: relative;
+    margin-top: 10em;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.icon--big {
+    width: 250px;
+    height: 250px;
+}
+
+.icon--big img {
+    width: 100px;
+}
+
+.empty-icon {
+    background-color: hsl(237, 49%, 15%, 0.40);
+}
+
+.icon--paper{
+    border: 2.5em solid  hsl(230, 89%, 65%);
+    box-shadow: 0 10px hsl(230, 89%, 55%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+.icon--scissors {
+    border: 2.5em solid  hsl(40, 84%, 53%);
+    box-shadow: 0 10px hsl(39, 89%, 39%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+.icon--rock {
+    border: 2.5em solid  hsl(349, 70%, 56%);
+    box-shadow: 0 10px hsl(349, 71%, 43%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+.icon--paper-position {
+    position: absolute;
+    top: -9.5em;
+    left: -8.5em;
+}
+
+.icon--rock-position {
+    position: absolute;
+    bottom: -7.5em;
+    left: 4.5em;
+}
+
+.icon--scissors-position {
+    position: absolute;
+    top: -9.5em;
+    right: -8.5em;
+}
+
+.icon--paper-position:hover {
+    transform: translate(0,-5%);
+    box-shadow: 0 20px hsl(230, 89%, 55%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+.icon--rock-position:hover {
+    transform: translate(0,-5%);
+    box-shadow: 0 20px hsl(349, 71%, 43%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+.icon--scissors-position:hover {
+    transform: translate(0,-5%);
+    box-shadow: 0 20px hsl(39, 89%, 39%), 0 7px hsl(0, 0%, 74%) inset;
+}
+
+
+.pick-container {
+    min-width: 650px;
+    max-width: 1000px;
+}
+
+.pick__heading{
+    font-size: 30px;
+}
+
+.pick__heading-content {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.play-again {
+    width: 250px;
+    margin: 0 5em;
+    padding: 2em;
+}
+
+.play-again__heading{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+}
+
+.play-again__btn{
+    width: 100%;
+    background-color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 1em 2em;
+    color: #000000;
+}
+
+.play-again__btn:hover {
+    color: hsl(349, 70%, 56%);
+}
+
+@media screen and (max-width:1024px){
+    .rules-btn-position {
+        right: 1em;
+        top: 2em;
+        bottom: auto;
+    }
+    
+    .score-reset-btn-position {
+        top : 5.5em;
+        right: 1em;
+        bottom: auto;
+    } 
+
+    .radical-bg {
+        width: 500px;
+        height: 500px;
+        background: repeating-radial-gradient(circle,  hsl(237, 49%, 15%, 0%) , hsl(225deg 25% 32% / 41%) 14%);
+    }
+
+    .score-container{
+        width: 500px;
+        margin-bottom: 5em;
+    }
+        
+    .score__card{
+        width: 100px;
+        padding-top: 1.5em;
+    }
+
+    .score__number{
+        font-size: 4em;
+    }
+
+    .main-container{
+        transform: none;
+    }
+
+    .tabview{
+        height: 250px;
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .icon--big {
+        width: 200px;
+        height: 200px;
+    }
+
+    .icon--big img {
+        width: 50px;
+    }
+
+    
+    .icon--paper-position {
+        top: -7.5em;
+        left: -6.5em;
+    }
+
+    .icon--rock-position {
+        bottom: -5.5em;
+        left: 7.5em;
+    }
+
+    .icon--scissors-position {
+        top: -7.5em;
+        right: -6.5em;
+    }
+
+    .pick-container {
+        min-width: 500px;
+        max-width: 800px;
+    }
+
+    .pick__heading-content {
+        text-align: center;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        width: 200px;
+        height: 80px;
+    }
+    
+    .play-again {
+        width: 250px;
+        margin: 0;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .pick-container{
+        flex-wrap: wrap;
+        min-width: 400px;
+        max-width: 600px;
+        justify-content: center;
+    }
+
+    .play-again{
+        order: 3;
+        align-self: center;
+    }
+
+    .pick__heading:first-child{
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .main-container{
+        margin: 0 20px;
+    }
+    .score-container{
+        width: 400px;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .radical-bg {
+        width: 300px;
+        height: 300px;
+        background: repeating-radial-gradient(circle,  hsl(237, 49%, 15%, 0%) , hsl(225deg 25% 32% / 41%) 14%);
+    }
+        
+    .score__card{
+        width: 80px;
+        padding-top: 1.5em;
+    }
+
+    .tabview{
+        height: 150px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon--big {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon--big svg ,
+    .icon--big img {
+        width: 30px;
+    }
+
+    .icon--paper-position {
+        top: -5.5em;
+        left: -4.5em;
+    }
+    
+    .icon--rock-position {
+        bottom: -3.5em;
+        left: 3.5em;
+    }
+
+    .icon--scissors-position {
+        top: -5.5em;
+        right: -4.5em;
+    }
+
+    .icon--paper{
+        border: 1em solid  hsl(230, 89%, 65%);
+        box-shadow: 0 5px hsl(230, 89%, 55%), 0 7px hsl(0, 0%, 74%) inset;
+    }
+    
+    .icon--scissors {
+        border: 1em solid  hsl(40, 84%, 53%);
+        box-shadow: 0 5px hsl(39, 89%, 39%), 0 7px hsl(0, 0%, 74%) inset;
+    }
+    
+    .icon--rock {
+        border: 1em solid  hsl(349, 70%, 56%);
+        box-shadow: 0 5px hsl(349, 71%, 43%), 0 7px hsl(0, 0%, 74%) inset;
+    }
+
+    .pick-container {
+        min-width: 500px;
+        max-width: 800px;
+    }
+
+    .pick__heading-content {
+        font-size: 20px;
+
+        width: 100px;
+        height: 80px;
+    }
+
+    .pick__heading:first-child {
+        margin-right: 75px;
+    }
+
+    .rules-btn-position {
+        bottom: 2em;
+        right: 9em;
+        top: auto;
+    }
+
+    .score-reset-btn-position {
+        top : 2.5em;
+        right: 6em;
+        bottom: auto;
+    } 
+}
+
+@media screen and (max-width: 320px){
+    
+}
